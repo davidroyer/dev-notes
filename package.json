@@ -1,0 +1,10 @@
+{
+  "name": "dev-notes",
+  "version": "0.0.0",
+  "description": "My developer notes to remember and log information, lessons, and tips.",
+  "main": "index.js",
+  "repository": "https://github.com/davidroyer/dev-notes",
+  "author": "David Royer",
+  "license": "MIT",
+  "private": false
+}
