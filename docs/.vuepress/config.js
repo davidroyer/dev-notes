@@ -8,7 +8,9 @@ module.exports = {
     "/vscode.md",
     "/vue-testing.md",
     "/vue-plugins.md",
-    "/vuepress.md"
+    "/vuepress.md",
+    "/releases.md",
+    "/vue2-editor.md"
   ]
   }
 };

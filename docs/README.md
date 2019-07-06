@@ -1,4 +1,4 @@
-# My DevNotes
+# :books: My DevNotes
 
 > Keeping track of what I know
 

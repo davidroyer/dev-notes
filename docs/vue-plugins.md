@@ -3,24 +3,7 @@
 ## For Build With Seperated CSS
 
 ```js
-import {VuePlugin} from 'vue2-editor/modular'
-```
-
-## For Releasing & Publishing
-
-**References**
-
-* [Conventional Changelog Configuration Spec](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.0.0/README.md#types)
-
-`standard-version` has Lifecycle scripts that make it much easier
-
-```json
-  "standard-version": {
-    "scripts": {
-      "postbump": "yarn vue-cli-service build && git add -A && git commit -m 'chore: new build'",
-      "posttag": "git push --follow-tags"
-    }
-  },
+import { VuePlugin } from "vue2-editor/modular";
 ```
 
 ## For Commits
@@ -30,7 +13,6 @@ I figured out that I don't need to try to escape backticks for inline code. Here
 ```bash
  git commit -am 'fix: :bug: fixes emoji in `CHANGELOG.md`'
 ```
-
 
 ## Rollup
 
@@ -95,7 +77,7 @@ This allows me to commit build files with release files
 }
 ```
 
-> **See `standard-version` [Lifecycle Scripts](https://github.com/conventional-changelog/standard-version#lifecycle-scripts)**  
+> **See `standard-version` [Lifecycle Scripts](https://github.com/conventional-changelog/standard-version#lifecycle-scripts)**
 
 ## What I Now Know About The Bundling Process
 
