@@ -1,6 +1,31 @@
 module.exports = {
+  head: [
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css'
+        // integrity: 'sha384-xxx',
+        // crossorigin: 'anonymous'
+      }
+    ]
+  ],  
   title: "DevNotes",
-  description: "Your Vue.js editor for rich text editing built with Vue.js and Quill.js",
+  description: "Developer Notes for David Royer",
+  markdown: {
+    plugins: [
+      'fontawesome', // equals to @org/markdown-it-foo if exists
+      // 'fontawesome', // equals to @org/markdown-it-foo if exists
+      // ['markdown-it-bar', {
+      //   // provide options here
+      // }]
+    ],
+    extendMarkdown: md => {
+      md.set({ breaks: true })
+      md.use(require('markdown-it-mermaid').default);
+      // md.use(require('markdown-it-xxx'))
+    }
+  },  
   themeConfig: {
     sidebar: [
     "/",

@@ -14,5 +14,9 @@
   },
   "devDependencies": {
     "vuepress": "^1.0.2"
+  },
+  "dependencies": {
+    "markdown-it-fontawesome": "^0.3.0",
+    "markdown-it-mermaid": "^0.2.5"
   }
 }
