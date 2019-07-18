@@ -35,7 +35,8 @@ module.exports = {
     "/vue-plugins.md",
     "/vuepress.md",
     "/releases.md",
-    "/vue2-editor.md"
+    "/vue2-editor.md",
+    "/circleci.md"
   ]
   }
 };

@@ -32,3 +32,7 @@ ssh-keygen -m PEM -t rsa -C "droyer01@gmail.com"
 ## References
 
 <https://circleci.com/docs/2.0/gh-bb-integration/#enable-your-project-to-check-out-additional-private-repositories>
+
+## Example File
+
+<<< @/docs/.vuepress/snippets/ciricleci-config.vue
