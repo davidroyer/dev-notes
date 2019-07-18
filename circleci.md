@@ -13,7 +13,7 @@ Things To Remember
   ```yml
   - run: npm version patch -m 'new release [skip ci]'
   ```
-- Added a step to set fingerprint that is in CircleCI config
+- Added a step to set fingerprint that is in CircleCI config. When you push to your GitHub repository from a job, CircleCI will use the SSH key you added.
   ```yml
   steps:
     - add_ssh_keys:
