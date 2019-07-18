@@ -35,4 +35,4 @@ ssh-keygen -m PEM -t rsa -C "droyer01@gmail.com"
 
 ## Example File
 
-<<< @/docs/.vuepress/snippets/circleci-config.vue
+<<< @/docs/.vuepress/snippets/circleci-config.yml
