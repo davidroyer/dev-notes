@@ -29,14 +29,15 @@ module.exports = {
   themeConfig: {
     sidebar: [
     "/",
+    "/circleci.md",
     "/git.md",
-    "/vscode.md",
-    "/vue-testing.md",
-    "/vue-plugins.md",
-    "/vuepress.md",
+    "/javascript.md",
     "/releases.md",
+    "/vscode.md",
+    "/vue-plugins.md",
+    "/vue-testing.md",
     "/vue2-editor.md",
-    "/circleci.md"
+    "/vuepress.md"
   ]
   }
 };
