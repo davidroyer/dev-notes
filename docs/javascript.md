@@ -9,56 +9,55 @@ When You have an multiple endpoints you need to make requests to from an API and
 1. Create an array of these endpoints
 
    ```js
-   const Resources = ["posts", "pages"];
+   const apiEndpoints = ["posts", "users", "todos"];
    ```
 
 2. Use `Array.map()` to execute the async/await logic for each request. This creates an Array of Promises.
 
    ```js
-   const ResourcePromises = Resources.map(async resource => {
-     this.resources[resource] = await this.$wp[resource]();
+   const DataPromises = apiEndpoints.map(async endpoint => {
+     const { data } = await axios.get(endpoint);
+     apiData[endpoint] = data;
    });
    ```
 
 3. Await the complete response by using `Promise.all()`
 
    ```js
-   await Promise.all(ResoucePromises);
+   await Promise.all(DataPromises);
    ```
 
-**Here's an example with Vue**
+4. All of this functionality needs to be wrapped within an `async` function
 
-```vue
-<template>
-  <div id="app">
-    <button @click="getResources()">Get Resources</button>
+   ```js
+   async function getEndpoints() {
+     const DataPromises = apiEndpoints.map(async endpoint => {
+       const { data } = await axios.get(endpoint);
+       apiData[endpoint] = data;
+     });
 
-    <div id="data" v-if="dataLoaded">
-      <h2 v-for="(resource, key) in resources" :key="key" v-text="key" />
-    </div>
-  </div>
-</template>
+     await Promise.all(DataPromises);
+   }
+   ```
 
-<script>
-const Resources = ["posts", "pages"];
+**Here's an example using axios**
 
-export default {
-  name: "App",
+```js
+import axios from "axios";
 
-  data: () => ({
-    dataLoaded: false,
-    resources: {}
-  }),
+axios.defaults.baseURL = "https://jsonplaceholder.typicode.com";
 
-  methods: {
-    async getResources() {
-      const ResourcePromises = Resources.map(async resource => {
-        this.resources[resource] = await this.$wp[resource]();
-      });
-      await Promise.all(ResourcePromises);
-      this.dataLoaded = true;
-    }
-  }
-};
-</script>
+const apiData = {};
+const apiEndpoints = ["posts", "users", "todos"];
+
+async function getEndpoints() {
+  const DataPromises = apiEndpoints.map(async endpoint => {
+    const { data } = await axios.get(endpoint);
+    apiData[endpoint] = data;
+  });
+
+  await Promise.all(DataPromises);
+}
+
+getEndpoints();
 ```
