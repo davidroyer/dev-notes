@@ -4,6 +4,10 @@
 
 <br>
 
+## For Image Handling
+
+[CodePen Link](https://codepen.io/droyer01/pen/eqBBQp?editors=0110) of my progress so far.
+
 ## For Nuxt & SSR
 
 Possibly switch to this:
