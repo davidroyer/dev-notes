@@ -30,15 +30,16 @@ module.exports = {
     sidebar: [
       "/",
       "/circleci.md",
+      "/fire.md",
       "/git.md",
       "/javascript.md",
+      "/nuxt.md",
       "/releases.md",
       "/vscode.md",
       "/vue-plugins.md",
       "/vue-testing.md",
       "/vue2-editor.md",
-      "/vuepress.md",
-      "/fire.md"
+      "/vuepress.md"
     ]
   }
 };
