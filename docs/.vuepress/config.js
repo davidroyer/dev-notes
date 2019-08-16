@@ -38,7 +38,7 @@ module.exports = {
       "/vue-testing.md",
       "/vue2-editor.md",
       "/vuepress.md",
-      "/firebase.md"
+      "/fire.md"
     ]
   }
 };

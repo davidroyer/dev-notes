@@ -30,3 +30,11 @@ Inside `.babelrc.json`. Ther order sems to _REALLY_ matter btw:
     ]
 }
 ```
+
+## Markdown
+
+- Shortcut to open Markdown Preview to side
+
+<kbd>⌘K</kbd>  
+ _Release. Then,_  
+<kbd>V</kbd>
