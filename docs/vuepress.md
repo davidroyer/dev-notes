@@ -2,19 +2,19 @@
 
 ::: demo
 
-```html
+```vue
 <template>
   <button class="demo-btn" @click="alertUser">Alert</button>
 </template>
 
 <script>
-  export default {
-    methods: {
-      alertUser() {
-        alert("hello!");
-      }
+export default {
+  methods: {
+    alertUser() {
+      alert("hello!");
     }
-  };
+  }
+};
 </script>
 ```
 
