@@ -14,11 +14,9 @@ module.exports = {
   description: "Developer Notes for David Royer",
   markdown: {
     plugins: [
-      "fontawesome" // equals to @org/markdown-it-foo if exists
-      // 'fontawesome', // equals to @org/markdown-it-foo if exists
-      // ['markdown-it-bar', {
-      //   // provide options here
-      // }]
+      "fontawesome",
+      "codesandbox",
+      "block-embed"
     ],
     extendMarkdown: md => {
       md.set({ breaks: true });

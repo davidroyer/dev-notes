@@ -1,6 +1,55 @@
 # VuePress
 
+## Config
+
+When adding markdown-it plugins, you can omit the text `markdown-it`.  
+Example:
+
+```js
+{
+  markdown: {
+    plugins: ["fontawesome", "codesandbox", "block-embed"];
+  }
+}
+```
+
 ## Markdown Plugins
+
+Notes on good plugins
+
+### Video Embed
+
+[Plugin Repo](https://github.com/rotorz/markdown-it-block-embed)
+
+<!-- @[youtube](movie id) -->
+
+**Code:**
+
+```markdown
+@[vimeo](353944853)
+```
+
+**Example:**
+
+@[vimeo](353944853)
+
+---
+
+### CodeSandbox
+
+[Plugin Repo](https://github.com/sergiodxa/markdown-it-codesandbox)
+
+**Code:**
+
+```markdown
+@[codesandbox](wp-request-test-ppqr7)
+```
+
+**Example:**
+
+@[codesandbox](wp-request-test-ppqr7)
+
+---
 
 ### FontAwesome
 
@@ -12,6 +61,8 @@ Hello World! :fas-flag:
 
 - [:fab-google: Google](https://www.google.com/)
 - [:fab-github: GitHub](https://github.com/)
+
+---
 
 ### Mermaid
 
