@@ -1,5 +1,37 @@
 # VuePress
 
+::: demo
+
+```html
+<template>
+  <button class="demo-btn" @click="alertUser">Alert</button>
+</template>
+
+<script>
+  export default {
+    methods: {
+      alertUser() {
+        alert("hello!");
+      }
+    }
+  };
+</script>
+```
+
+:::
+
+## vuepress-plugin-vue-demo-example
+
+::: demo example description
+
+```html {2}
+<template>
+  <div>example code</div>
+</template>
+```
+
+:::
+
 ## Config
 
 When adding markdown-it plugins, you can omit the text `markdown-it`.  
@@ -99,3 +131,5 @@ C-->D;
 graph TD
     Start --> Stop
 ```
+
+## Demo Test

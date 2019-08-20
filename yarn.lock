@@ -4394,7 +4394,7 @@ markdown-it-video@^0.6.3:
   resolved "https://registry.yarnpkg.com/markdown-it-video/-/markdown-it-video-0.6.3.tgz#ee96a8fce4a262872f8aaf9706c31540d40104c2"
   integrity sha512-T4th1kwy0OcvyWSN4u3rqPGxvbDclpucnVSSaH3ZacbGsAts964dxokx9s/I3GYsrDCJs4ogtEeEeVP18DQj0Q==
 
-markdown-it@^8.4.1:
+markdown-it@^8.4.1, markdown-it@^8.4.2:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
   integrity sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
@@ -7123,6 +7123,14 @@ vuepress-plugin-container@^2.0.0:
   resolved "https://registry.yarnpkg.com/vuepress-plugin-container/-/vuepress-plugin-container-2.0.2.tgz#3489cc732c7a210b31f202556e1346125dffeb73"
   integrity sha512-SrGYYT7lkie7xlIlAVhn+9sDW42MytNCoxWL/2uDr+q9wZA4h1uYlQvfc2DVjy+FsM9PPPSslkeo/zCpYVY82g==
   dependencies:
+    markdown-it-container "^2.0.0"
+
+vuepress-plugin-vue-demo@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-vue-demo/-/vuepress-plugin-vue-demo-1.0.13.tgz#f02f05d05bae8ea5796890c4e983ff4b77fb1f5c"
+  integrity sha512-hbcaDfYyGLgiBpiaMKsKKkBpIhjhDrirGSGrirPi1rbLEheVC1ItUmtUdyF9xBlObwagCZ9RBEMvEqOKZnYdxw==
+  dependencies:
+    markdown-it "^8.4.2"
     markdown-it-container "^2.0.0"
 
 vuepress@^1.0.2:

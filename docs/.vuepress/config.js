@@ -12,6 +12,7 @@ module.exports = {
   ],
   title: "DevNotes",
   description: "Developer Notes for David Royer",
+  plugins: ['vue-demo'],  
   markdown: {
     plugins: [
       "fontawesome",

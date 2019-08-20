@@ -15,7 +15,8 @@
   "devDependencies": {
     "markdown-it-block-embed": "^0.0.3",
     "markdown-it-video": "^0.6.3",
-    "vuepress": "^1.0.2"
+    "vuepress": "^1.0.2",
+    "vuepress-plugin-vue-demo": "^1.0.13"
   },
   "dependencies": {
     "markdown-it-codesandbox": "^1.0.1",
