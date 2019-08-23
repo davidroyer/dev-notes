@@ -61,3 +61,22 @@ async function getEndpoints() {
 
 getEndpoints();
 ```
+
+## Axios
+
+If this is `api/index.js`
+
+```js
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: `https://jamstack-api.firebaseio.com/`
+});
+
+api.interceptors.request.use(config => {
+  config.url = `${config.baseURL}/${config.url}.json`;
+  return config;
+});
+
+export default api;
+```
