@@ -64,7 +64,7 @@ getEndpoints();
 
 ## Axios
 
-If this is `api/index.js`
+### Creating An Instance
 
 ```js
 import axios from "axios";
