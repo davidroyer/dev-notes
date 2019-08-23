@@ -11,3 +11,11 @@ Example of Conventional Commits
 ```bash
 feat(parser): add ability to parse arrays
 ```
+
+## Close Issues
+
+Use `Closes #123`
+
+```bash
+fix(parser): fixes errors. Closes #123.
+```
