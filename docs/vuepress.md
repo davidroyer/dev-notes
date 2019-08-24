@@ -74,12 +74,12 @@ Notes on good plugins
 **Code:**
 
 ```markdown
-@[codesandbox](wp-request-test-ppqr7)
+@[codesandbox](vue-firebase-api-optimized-requests-h4rgf)
 ```
 
 **Example:**
 
-@[codesandbox](wp-request-test-ppqr7)
+@[codesandbox](vue-firebase-api-optimized-requests-h4rgf)
 
 ---
 
