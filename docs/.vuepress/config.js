@@ -35,6 +35,7 @@ module.exports = {
       "/nuxt.md",
       "/releases.md",
       "/vscode.md",
+      "/vue.md",
       "/vue-plugins.md",
       "/vue-testing.md",
       "/vue2-editor.md",

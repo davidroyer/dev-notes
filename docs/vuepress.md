@@ -74,12 +74,17 @@ Notes on good plugins
 **Code:**
 
 ```markdown
-@[codesandbox](vue-firebase-api-optimized-requests-h4rgf)
+@[codesandbox](optimized-asyncawait-parallel-request-vuejs-example-h4rgf)
+@[codesandbox](optimized-asyncawait-batch-updates-vuejs-example-tuoqe)
 ```
 
 **Example:**
 
-@[codesandbox](vue-firebase-api-optimized-requests-h4rgf)
+@[codesandbox](optimized-asyncawait-parallel-request-vuejs-example-h4rgf)
+
+<br>
+
+@[codesandbox](optimized-asyncawait-batch-updates-vuejs-example-tuoqe)
 
 ---
 
