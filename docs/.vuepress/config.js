@@ -39,7 +39,8 @@ module.exports = {
       "/vue-plugins.md",
       "/vue-testing.md",
       "/vue2-editor.md",
-      "/vuepress.md"
+      "/vuepress.md",
+      "/vuexfire.md"
     ]
   }
 };
