@@ -80,3 +80,23 @@ api.interceptors.request.use(config => {
 
 export default api;
 ```
+
+## Interesting
+
+The first alert will actually fire before the calendar's view gets changes and the view will only change after closing the alert.
+
+The second alert, inside the `timeout`, will fire at what seems the exact same time
+as the changing view even though it has 0 seconds for the `timeout`.
+
+I think this has to do with the way JavaScript works like what you've read when learning about Promises & Async/Await.
+
+```js
+setTimeout(() => {
+  calendar.changeView("listWeek");
+  alert("Alert1 -> Line After changeView!");
+
+  setTimeout(() => {
+    alert("Alert2 -> In another timeout!");
+  }, 0);
+}, 1500);
+```
