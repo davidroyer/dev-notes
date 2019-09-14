@@ -20,3 +20,31 @@ Need to log issue with dev not working exacftly right but works perfectly in pro
 ### Part 3 - The NEW Solution Of Dynamically Setting The **Admin** To SPA
 
 Implemented with `serverMiddleware`. Apparently this still works for SSites.
+
+---
+
+## Plugins
+
+```js
+export default (ctx, inject) => {
+  ctx.fdbClient = fdbClient;
+  inject("fdbClient", fdbClient);
+};
+```
+
+This allows you to access the plugin within `asyncData` as shown below.
+
+```js
+  async asyncData({ fdbClient }) {
+      return {}
+  })
+```
+
+If I just `inject` then I would access it as follows
+
+```js
+  async asyncData({ app }) {
+      const { fdbClient } = app
+    return {}
+  })
+```
