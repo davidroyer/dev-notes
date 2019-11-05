@@ -46,4 +46,41 @@ storageRef
   .catch(console.error);
 ```
 
+## Vue Plugin Setup
+
+```js
+import * as firebase from "firebase/app";
+
+import "firebase/auth";
+import "firebase/database";
+import "firebase/storage";
+import "firebase/firestore";
+
+// ADD YOUR FIREBASE CONFIG OBJECT HERE:
+var firebaseConfig = {
+  apiKey: "{apiKey}",
+  authDomain: "jamstack-api.firebaseapp.com",
+  databaseURL: "https://jamstack-api.firebaseio.com",
+  projectId: "jamstack-api",
+  storageBucket: "jamstack-api.appspot.com",
+  messagingSenderId: "844489125366",
+  appId: "1:844489125366:web:32d92a90517a0f6a"
+};
+
+const fireApp = firebase.initializeApp(firebaseConfig);
+const fireAuth = fireApp.auth();
+const fireDB = fireApp.database();
+const fireStorage = fireApp.storage();
+const fireStoreDB = fireApp.firestore();
+const GoogleProvider = new firebase.auth.GoogleAuthProvider();
+console.log(fireStoreDB);
+
+export { GoogleProvider, fireApp, fireAuth, fireDB, fireStorage, fireStoreDB };
+
+export default ({ Vue }) => {
+  Vue.prototype.$fireApp = fireApp;
+  Vue.prototype.$fireAuth = fireAuth;
+};
+```
+
 ## VuexFire
