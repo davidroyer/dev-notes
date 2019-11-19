@@ -1,1 +1,3 @@
 node_modules
+docs/.vuepress/get-sidebar.js
+docs/.vuepress/file-finder.js

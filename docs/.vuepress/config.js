@@ -1,3 +1,5 @@
+const { fs, path } = require("@vuepress/shared-utils");
+
 module.exports = {
   head: [
     [
@@ -12,13 +14,9 @@ module.exports = {
   ],
   title: "DevNotes",
   description: "Developer Notes for David Royer",
-  plugins: ['vue-demo'],  
+  plugins: ["vue-demo"],
   markdown: {
-    plugins: [
-      "fontawesome",
-      "codesandbox",
-      "block-embed"
-    ],
+    plugins: ["fontawesome", "codesandbox", "block-embed"],
     extendMarkdown: md => {
       md.set({ breaks: true });
       md.use(require("markdown-it-mermaid").default);
@@ -26,21 +24,41 @@ module.exports = {
     }
   },
   themeConfig: {
-    sidebar: [
-      "/",
-      "/circleci.md",
-      "/fire.md",
-      "/git.md",
-      "/javascript.md",
-      "/nuxt.md",
-      "/releases.md",
-      "/vscode.md",
-      "/vue.md",
-      "/vue-plugins.md",
-      "/vue-testing.md",
-      "/vue2-editor.md",
-      "/vuepress.md",
-      "/vuexfire.md"
-    ]
+    sidebar: getSidebar()
+    // sidebar: [
+    //   "/",
+    //   "/circleci.md",
+    //   "/fire.md",
+    //   "/git.md",
+    //   "/javascript.md",
+    //   "/nuxt.md",
+    //   "/releases.md",
+    //   "/vscode.md",
+    //   "/vue.md",
+    //   "/vue-plugins.md",
+    //   "/vue-testing.md",
+    //   "/vue2-editor.md",
+    //   "/vuepress.md",
+    //   "/vuexfire.md"
+    // ]
   }
 };
+
+function getSidebar() {
+  return (
+    fs
+      .readdirSync(path.resolve(__dirname, "../"))
+      // make sure we only include Markdown files
+      .filter(filename => filename.indexOf(".md") >= 0)
+      .map(filename => {
+        // remove the file extension
+        filename = filename.slice(0, -3);
+
+        if (filename.indexOf("index") >= 0 || filename.indexOf("README") >= 0) {
+          filename = "/";
+        }
+        return filename;
+      })
+      .sort()
+  );
+}

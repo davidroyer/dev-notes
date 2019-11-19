@@ -96,3 +96,5 @@ CommonJS is for the situations where you don't have a bundled like Webpack or Ro
 Bundlers like Webpack and Rollup can use this version. They do this happens by picking up on the value of the `module` property in your plugin's `package.json`.
 
 This allows for Tree-Shaking (I've never set this up before though).
+
+yarn add davidroyer/vue-cli-plugin-vplugin
