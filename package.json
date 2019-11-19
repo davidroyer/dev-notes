@@ -19,6 +19,7 @@
     "vuepress-plugin-vue-demo": "^1.0.13"
   },
   "dependencies": {
+    "fs-jetpack": "^2.2.3",
     "markdown-it-codesandbox": "^1.0.1",
     "markdown-it-fontawesome": "^0.3.0",
     "markdown-it-mermaid": "^0.2.5"
