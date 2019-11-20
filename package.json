@@ -21,6 +21,7 @@
   "dependencies": {
     "directory-tree": "^2.2.4",
     "fs-jetpack": "^2.2.3",
+    "glob": "^7.1.6",
     "markdown-it-codesandbox": "^1.0.1",
     "markdown-it-fontawesome": "^0.3.0",
     "markdown-it-mermaid": "^0.2.5"
