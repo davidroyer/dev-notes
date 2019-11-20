@@ -1,3 +1,7 @@
+---
+title: Plugins
+---
+
 # Vue Plugins
 
 ## For Build With Seperated CSS

@@ -1,4 +1,6 @@
 const { fs, path } = require("@vuepress/shared-utils");
+const { generateSidebarNav } = require("../../vp-walker");
+console.log("TCL: generateSidebarNav", generateSidebarNav);
 
 module.exports = {
   head: [
@@ -24,41 +26,23 @@ module.exports = {
     }
   },
   themeConfig: {
-    sidebar: getSidebar()
-    // sidebar: [
-    //   "/",
-    //   "/circleci.md",
-    //   "/fire.md",
-    //   "/git.md",
-    //   "/javascript.md",
-    //   "/nuxt.md",
-    //   "/releases.md",
-    //   "/vscode.md",
-    //   "/vue.md",
-    //   "/vue-plugins.md",
-    //   "/vue-testing.md",
-    //   "/vue2-editor.md",
-    //   "/vuepress.md",
-    //   "/vuexfire.md"
-    // ]
+    sidebar: generateSidebarNav()
+    // sidebar: [...generateSidebarNav]
   }
 };
 
 function getSidebar() {
-  return (
-    fs
-      .readdirSync(path.resolve(__dirname, "../"))
-      // make sure we only include Markdown files
-      .filter(filename => filename.indexOf(".md") >= 0)
-      .map(filename => {
-        // remove the file extension
-        filename = filename.slice(0, -3);
+  return fs
+    .readdirSync(path.resolve(__dirname, "../"))
+    .filter(filename => filename.indexOf(".md") >= 0)
+    .map(filename => {
+      // remove the file extension
+      filename = filename.slice(0, -3);
 
-        if (filename.indexOf("index") >= 0 || filename.indexOf("README") >= 0) {
-          filename = "/";
-        }
-        return filename;
-      })
-      .sort()
-  );
+      if (filename.indexOf("index") >= 0 || filename.indexOf("README") >= 0) {
+        filename = "/";
+      }
+      return filename;
+    })
+    .sort();
 }
