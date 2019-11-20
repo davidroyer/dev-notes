@@ -1,10 +1,8 @@
 const dirTree = require("directory-tree");
-// let sidebarArray = [];
 const { join, basename, relative } = require("path");
 const glob = require("glob");
 
 function generateVPressSidebar() {
-  console.log("TCL: generateVPressSidebar");
   const vpressNav = {};
   const vpressItems = glob.sync("**/*.md", {
     cwd: "docs"
@@ -19,12 +17,9 @@ function generateVPressSidebar() {
       .replace("index", "");
 
     path = `/${path}`;
-    console.log("TCL: generateVPressSidebar -> path", path);
 
     if (item.split("/").length === 1) itemName = item;
     else [groupName, itemName] = item.split("/");
-
-    console.log("itemName", itemName);
 
     if (groupName) {
       if (!vpressNav[groupName]) vpressNav[groupName] = [];
@@ -58,23 +53,9 @@ const groupObj = {
   children: ["/vue/plugins", "/vue/testing"]
 };
 
-const docs = dirTree("docs")
-  .children.filter(item => item.name !== ".vuepress")
-  .map(handleMarkdownFile);
-
-// const generateSidebarNav = () =>
-//   docs.map(item => {
-//     if (item.type === "file" && item.extension === ".md") return item.path;
-//     else {
-//       const groupFiles = item.children.map(handleMarkdownFile);
-//       const childrenPathsArray = groupFiles.map(file => file.path);
-
-//       return {
-//         title: titleCase(item.name),
-//         children: childrenPathsArray
-//       };
-//     }
-//   });
+// const docs = dirTree("docs")
+//   .children.filter(item => item.name !== ".vuepress")
+//   .map(handleMarkdownFile);
 
 function handleMarkdownFile(item) {
   item.path = item.path
@@ -96,6 +77,4 @@ function titleCase(str) {
 }
 
 exports.generateVPressSidebar = generateVPressSidebar;
-// exports.generateSidebarNav = generateSidebarNav;
 exports.handleMarkdownFile = handleMarkdownFile;
-exports.docsDirArray = docs;
