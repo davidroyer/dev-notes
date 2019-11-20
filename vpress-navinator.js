@@ -48,15 +48,6 @@ function generateVPressSidebar() {
   return vpressNavArray.sort();
 }
 
-const groupObj = {
-  title: "Vue",
-  children: ["/vue/plugins", "/vue/testing"]
-};
-
-// const docs = dirTree("docs")
-//   .children.filter(item => item.name !== ".vuepress")
-//   .map(handleMarkdownFile);
-
 function handleMarkdownFile(item) {
   item.path = item.path
     .replace("docs", "")
