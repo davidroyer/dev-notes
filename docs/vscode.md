@@ -1,5 +1,9 @@
 # VSCODE
 
+## NEED TO ADD
+
+- Snippets. Especially my custom markdown ones and how I had to add settings `"editor.tabCompletion": "onlySnippets"`
+
 To get markdown files to automatically fix rules from `markdownlint`,
 this goes in `settings.json`:
 
