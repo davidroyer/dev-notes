@@ -4,6 +4,20 @@ title: Plugins
 
 # Vue Plugins
 
+## Using My Personal `vue-cli` plugin
+
+1. Add it to repo
+
+   ```bash
+   yarn add davidroyer/vue-cli-plugin-vplugin
+   ```
+
+2. Run the setup
+
+   ```bash
+   vue invoke vplugin
+   ```
+
 ## For Build With Seperated CSS
 
 ```js
