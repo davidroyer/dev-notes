@@ -1,5 +1,6 @@
 const { fs, path } = require("@vuepress/shared-utils");
 const { generateVPressSidebar } = require("../../vpress-navinator");
+console.log("TCL: generateVPressSidebar", generateVPressSidebar());
 
 module.exports = {
   head: [

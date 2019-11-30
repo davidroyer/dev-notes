@@ -2,6 +2,39 @@
 
 > Keeping track of what I know
 
+## Structure
+
+docs
+┣ .vuepress
+
+┃ ┣ components
+┃ ┃ ┗ Mermaid.vue
+
+┃ ┣ snippets
+┃ ┃ ┗ circleci-config.yml
+┃ ┣ styles
+┃ ┃ ┗ index.styl
+┃ ┗ config.js
+┣ guide
+┃ ┣ file1.md
+┃ ┣ file2.md
+┃ ┗ newfile.md
+┣ vue
+┃ ┣ notes.md
+┃ ┣ plugins.md
+┃ ┗ testing.md
+┣ README.md
+┣ circleci.md
+┣ firebase.md
+┣ git.md
+┣ javascript.md
+┣ nuxt.md
+┣ releases.md
+┣ vscode.md
+┣ vue2-editor.md
+┣ vuepress.md
+┗ vuexfire.md
+
 ## Things To Look Into To
 
 Got odd message when running `git push`. Check on what this means:
@@ -34,4 +67,24 @@ To have launchd start php now and restart at login:
   brew services start php
 Or, if you don't want/need a background service you can just run:
   php-fpm
+```
+
+---
+
+## Terminalizer
+
+```bash
+The recording data is saved into the file:
+/Users/davidroyer/Repos/NuxtBookProject/demo.yml
+You can edit the file and even change the configurations.
+
+Let's now share your recording on https://terminalizer.com
+The command `terminalizer share`can be used anytime to share recordings!
+
+The global config directory is created at
+/Users/davidroyer/.terminalizer
+Open the following link in your browser and login into your account
+https://terminalizer.com/token?token=62f8f6f8-e093-4235-9a96-7ffe3719867d
+
+When you do it, press any key to continue
 ```
