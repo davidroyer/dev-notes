@@ -1,3 +1,0 @@
-# Newfile
-
-> TESTING NEW FILE

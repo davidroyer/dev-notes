@@ -1,8 +1,11 @@
----
-title: Notes
----
+# Notes
 
-# Vue Notes
+- When using the `ref` attribute on a Vue component then you need to use the
+  `.$el` to access the underlying HTML element as shown here:
+
+  ```js
+  const el = this.$refs.contactForm.$el;
+  ```
 
 ## Nice Way Of Setting Up Data Properties
 

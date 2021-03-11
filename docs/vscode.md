@@ -1,5 +1,14 @@
 # VSCODE
 
+- Rewrap is the extension that was messing up markdown and yaml files wrapping content
+
+- To disable or enable automatically importing components when using them inside the `template`, use the following setting:
+  ```json
+  {
+    "vetur.completion.autoImport": false
+  }
+  ```
+
 ## NEED TO ADD
 
 - Snippets. Especially my custom markdown ones and how I had to add settings `"editor.tabCompletion": "onlySnippets"`
